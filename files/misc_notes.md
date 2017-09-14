@@ -1,0 +1,2 @@
+One potential source of open education data is the Perkins Web Portal (https://perkins.ed.giv/pims/DataExplorer/)
+Can generate reports with desired metrics (states, performance levels, demographic info) and export as Excel. The Excel files appear to convert ok to csv. 
