@@ -61,10 +61,6 @@ these steps as you would any step in an experiment. You can
 do this in another text file, or a good option is to create a new tab in your spreadsheet
 with your notes. This way the notes and data stay together.
 
-This might be an example of a spreadsheet setup:
-
-![spreadsheet setup](../fig/spreadsheet-setup.png)
-
 Put these principles in to practice today during your Exercises. 
 
 
@@ -74,29 +70,24 @@ Put these principles in to practice today during your Exercises.
 The cardinal rules of using spreadsheet programs for data:
 
 1. Put all your variables in columns - the thing you're measuring,
-like 'weight' or 'temperature'.
-2. Put each observation in its own row.
+like 'final_exam_score' or 'gender'.
+2. Put each observation in its own row. For educational data, this usually
+means one student per row.
 3. Don't combine multiple pieces of information in one
 cell. Sometimes it just seems like one thing, but think if that's
-the only way you'll want to be able to use or sort that data.
+the only way you'll want to be able to use or sort that data. 
 4. Leave the raw data raw - don't change it!
 5. Export the cleaned data to a text-based format like CSV (comma-separated values) format. This
 ensures that anyone can use the data, and is required by
 most data repositories.
 
-For instance, we have data from a survey of small mammals in a desert
-ecosystem. Different people have gone to the field and entered data in
-to a spreadsheet. They keep track of things like species, plot,
-weight, sex and date collected.
+For example, you might be collecting data on students across multiple STEM
+courses. You might have a single column for storing the course name, but
+it may be more useful to have two columnts, one for course prefix (e.g. BIO
+or PHY) and another for course number. This way if you want to compare all 
+courses within a single discipline, or group by discipline, you can.
 
-If they were to keep track of the data like this:
-
-![multiple-info example](../fig/multiple-info.png)
-
-the problem is that species and sex are in the same field. So, if they wanted to 
-look at all of one species or look at different weight distributions by sex, 
-it would be hard to do this using this data setup. If instead we put sex and species 
-in different columns, you can see that it would be much easier. 
+FIXME: Add figures illustrating this difference.
 
 ### Columns for variables and rows for observations
 
@@ -107,53 +98,27 @@ So, instead we should have:
 
 ![single-info example](../fig/single-info.png)
 
-> ## Discussion
-> If not already discussed, introduce the dataset that will be used in this
-> lesson, and in the other ecology lessons, the [Portal Project Teaching Dataset](http://www.datacarpentry.org/ecology-workshop/data/). 
->
-> The data used in the ecology lessons are observations of a small mammal community in southern Arizona. This is part of a project studying the effects of rodents and ants on the plant community that has been running for almost 40 years. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots.
-> 
-> This is a real dataset that has been used in over 100 publications. We’ve simplified it just a little bit for the workshop, but you can download the full dataset and work with it using exactly the same tools we’ll learn about today.  
-{: .discussion}
-
-
 > ## Exercise
 > 
-> We're going to take a messy version of the survey data and describe how we would clean it up.
+> We're going to take a messy version of our data and describe how we would clean it up.
 >
-> 1. Download the data by clicking [here](https://ndownloader.figshare.com/files/2252083) to get it from FigShare.
+> 1. Download the data by clicking [here](FIXME insert link to messy data).
 > 2. Open up the data in a spreadsheet program. 
-> 3. You can see that there are two tabs. Two field assistants conducted the surveys, one
-in 2013 and one in 2014, and they both kept track of the data in their own way. Now
+> 3. You can see that there are two tabs. Two research assistants collected data, one on students in one school ("GP" = Gabriel Pereira) and one in another school ("MS" = Mousinho da Silveira). Both of them kept track of the data in their own way. Now
 you're the person in charge of this project and you want to be able to 
 start analyzing the data.   
-> 4. With the person next to you, identify what is wrong with this spreadsheet. Also discuss the steps you would need to take to clean up the 2013 and 2014 tabs, and to put them all together in one spreadsheet. 
+> 4. With the person next to you, identify what is wrong with this spreadsheet. Also discuss the steps you would need to take to clean up the GP and MS tabs, and to put them all together in one spreadsheet. 
 >
-> **Important** Do not forget our first piece of advice, the
+> **Important** Do not forget our first piece of advice, to
 > create a new file (or tab) for the cleaned data, never
 > modify your original (raw) data.
 > 
 > After you go through this exercise, we'll discuss as a group what was wrong
 > with this data and how you would fix it. 
 > 
-> > ## Solution
-> > - Take about 10 minutes to work on this exercise.
-> > - All the mistakes in [02-common-mistakes](../02-common-mistakes) are present in the messy dataset. If
-> > exercise is done during a workshop, ask people what they saw as wrong with
-> > the data data. As they bring up different points, you can refer to [02-common-mistakes](../02-common-mistakes)
-> {: .solution}
 {: .challenge}
 
-An excellent reference, in particular with regard to R scripting is
-
-> Hadley Wickham, *Tidy Data*, Vol. 59, Issue 10, Sep 2014, Journal of
-> Statistical Software. [http://www.jstatsoft.org/v59/i10](http://www.jstatsoft.org/v59/i10).
-
-
 ## Common Spreadsheet Errors
-
-This lesson is meant to be used as a reference for discussion as learners identify issues with the messy dataset discussed in the
-previous lesson. Instructors: don't go through this lesson except to refer to responses to the exercise in the previous lesson.
 
 There are a few potential errors to be on the lookout for in your own data as well as data from collaborators or the Internet. If you are aware of the errors and the possible negative effect on downstream data analysis and result interpretation, it might motivate yourself and your project members to try and avoid them. Making small changes to the way you format your data in spreadsheets, can have a great impact on efficiency and reliability when it comes to data cleaning and analysis.
 
