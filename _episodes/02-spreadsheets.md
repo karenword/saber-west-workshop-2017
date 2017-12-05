@@ -110,7 +110,7 @@ most data repositories.
 > 
 > We're going to take a messy version of our data and describe how we would clean it up.
 >
-> 1. Download the data by clicking [here](FIXME insert link to messy data).
+> 1. Download the data by clicking [here](https://github.com/ErinBecker/saber-west-workshop-2017/raw/gh-pages/data/modified_data/student-messy.xlsx).
 > 2. Open up the data in a spreadsheet program. 
 > 3. There are two tabs. Two research assistants collected data, one on students in one school ("GP" = Gabriel Pereira) and one in another school ("MS" = Mousinho da Silveira). Both of them kept track of the data in their own way. Now
 you're the person in charge of this project and you want to be able to 
@@ -187,5 +187,5 @@ You can also open your CSV files in Excel!
 > 
 > If you are working with data that contains commas, you likely will need to use another delimiter when working in a spreadsheet. In this
 > case, consider using tabs as your delimiter and working with TSV files. TSV files can be exported from spreadsheet
-> programs in the same way as CSV files. For more of a discussion on data formats and potential issues with commas within datasets see [the discussion page](http://www.datacarpentry.org/spreadsheet-ecology-lesson/discuss/).
+> programs in the same way as CSV files.
 {: .callout}
