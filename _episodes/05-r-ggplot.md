@@ -1,7 +1,7 @@
 ---
 title: "Visualizing Data in R with ggplot"
-teaching: 10
-exercises: 5
+teaching: 15
+exercises: 10
 questions:
 - "Key question"
 objectives:
@@ -186,55 +186,146 @@ facet_wrap(~ school)
 > {: .solution}
 {: .challenge}
 
-FIXME start here
+## Other Geoms
 
-Now we would like to split the line in each plot by the sex of each individual
-measured. To do that we need to make counts in the data frame grouped by `year`,
-`species_id`, and `sex`:
+We might be interested in looking at the relationship between grades and some 
+non-continuous variable, like number of previous failed courses (`failures`). To
+plot a relationship between a continuous and a non-continuous variable, we should use a box-plot. There is a `geom_boxplot` geometry within `ggplot2`.
 
-~~~
-yearly_sex_counts <- por %>%
-group_by(year, species_id, sex) %>%
-tally()
-~~~
-
-We can now make the faceted plot by splitting further by sex using `color` (within a single plot):
+First we will create a new base plot to build on:
 
 ~~~
-ggplot(data = yearly_sex_counts, aes(x = year, y = n, color = sex)) +
-geom_line() +
-facet_wrap(~ species_id)
+failures_plot = ggplot(data = por, aes(x = as.factor(failures), y = G3))
 ~~~
+{: .r}
+
+Now we can create our boxplot.
+
+~~~
+failures_plot + 
+geom_boxplot()
+~~~
+{: .r}
+
+If we want to see the data plotted on top of our boxplot, we can add another layer.
+
+~~~
+failures_plot + 
+geom_boxplot() + geom_jitter(alpha = 0.2)
+~~~
+{: .r}
+
+Now our outliers are showing up twice (once from the boxplot and once from the dot plot). We can remove them by setting the `outlier.shape` in `geom_boxplot` to `NA`. 
+
+~~~
+failures_plot + 
+geom_boxplot(outlier.shape = NA) + geom_jitter(alpha = 0.2)
+~~~
+{: .r}
+
+> ## Exercise
+> 
+> Create a boxplot showing the relationship between students' final grades and
+> any non-continuous variable other than `failures`. 
+{: .challenge}
+
+Using these features we've learned, we can make very complex plots quite quickly.
+For example, we could plot the relationship between study time and final grades for
+for students at each of our two schools, split by school and by whether they live
+in a rural or urban area. We can add our datapoints on to this boxplot and color 
+the indidivual points by students' sex. 
+
+~~~
+ggplot(data = por, aes(x = as.factor(studytime), y = G3)) + geom_boxplot(outlier.shape = NA) + facet_grid(address ~ school) + geom_jitter(alpha = 0.2, aes(color = sex))
+~~~
+{: .r}
+
+This plot probably shows more information than is useful. It's important to be
+thoughtful in creating your final graphics for present your data in a way that
+is interpretable to the reader. For now, let's use this plot as a scaffold to 
+practice what we've learned.
+
+> ## Exercise
+> 
+> Change the code for the complicated plot above to:
+> 1. Color code the data points by mother's education level.
+> 2. Switch the order of the panels so that school is in the rows and
+> rural/urban is in the columns.
+> 3. Make all the data points purple.
+> 4. Plot against the students total grade (G1 + G2 + G3) instead of just G3. 
+> 5. Facet by mother's education level and father's education level instead of
+> by school and address type.
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > ggplot(data = por, aes(x = as.factor(studytime), y = G3)) + geom_boxplot(outlier.shape = NA) + facet_grid(address ~ school) + geom_jitter(alpha = 0.2, aes(color = as.factor(Medu)))
+> > ~~~
+> > {: .r}
+> >
+> > ~~~
+> > ggplot(data = por, aes(x = as.factor(studytime), y = G3)) + geom_boxplot(outlier.shape = NA) + facet_grid(school ~ address) + geom_jitter(alpha = 0.2, aes(color = sex))
+> > ~~~
+> > {: .r}
+> > 
+> > ~~~
+> > ggplot(data = por, aes(x = as.factor(studytime), y = G3)) + geom_boxplot(outlier.shape = NA) + facet_grid(address ~ school) + geom_jitter(alpha = 0.2, color = "purple")
+> > ~~~
+> > {: .r}
+> > 
+> > ~~~
+> > ggplot(data = por, aes(x = as.factor(studytime), y = G1 + G2 + G3)) + geom_boxplot(outlier.shape = NA) + facet_grid(address ~ school) + geom_jitter(alpha = 0.2, aes(color = sex))
+> > ~~~
+> > {: .r}
+> > 
+> > ~~~
+> > ggplot(data = por, aes(x = as.factor(studytime), y = G3)) + geom_boxplot(outlier.shape = NA) + facet_grid(as.factor(Medu) ~ as.factor(Fedu)) + geom_jitter(alpha = 0.2, aes(color = sex))
+> > ~~~
+> > {: .r}
+> {: .solution}
+{: .challenge}
+
+> ## Exercise
+> Which of the plots from the exercise above are useful ways of showing the data? Which aren't?
+{: .challenge}
 
 Usually plots with white background look more readable when printed.  We can set
 the background to white using the function `theme_bw()`. Additionally, you can remove
 the grid:
 
 ~~~
-ggplot(data = yearly_sex_counts, aes(x = year, y = n, color = sex)) +
-geom_line() +
-facet_wrap(~ species_id) +
+failures_plot + 
+geom_boxplot(outlier.shape = NA) + geom_jitter(alpha = 0.2, aes(color = sex)) + 
 theme_bw() +
 theme(panel.grid = element_blank())
 ~~~
+{: .r}
+
+> ## Exercise
+> 
+> Try one of the [other pre-designed themes](http://ggplot2.tidyverse.org/reference/ggtheme.html). 
+> 
+{: .challenge}
 
 After creating your plot, you can save it to a file in your favorite format. The Export tab in the **Plot** pane in RStudio will save your plots at low resolution, which will not be accepted by many journals and will not scale well for posters. 
 
-Instead, use the `ggsave()` function, which allows you easily change the dimension and resolution of your plot by adjusting the appropriate arguments (`width`, `height` and `dpi`):
+Instead, use the `ggsave()` function, which allows you change the dimension and resolution of your plot by adjusting the appropriate arguments (`width`, `height` and `dpi`):
 
 ~~~
-my_plot <- ggplot(data = yearly_sex_counts, aes(x = year, y = n, color = sex)) +
-geom_line() +
-facet_wrap(~ species_id) +
-labs(title = 'Observed species in time',
-x = 'Year of observation',
-y = 'Number of species') +
-theme_bw() +
-theme(axis.text.x = element_text(colour="grey20", size=12, angle=90, hjust=.5, vjust=.5),
-axis.text.y = element_text(colour="grey20", size=12),
-text=element_text(size=16))
-ggsave("name_of_file.png", my_plot, width=15, height=10)
+ggsave("Desktop/failures_plot.pdf")
 ~~~
+{: .r}
 
-> ggplot(data = por, aes(x = as.factor(Walc), y = G3)) + 
-+ geom_boxplot()
+We can increase the dpi: 
+
+~~~
+ggsave("Desktop/failures_plot.pdf", dpi = 600)
+~~~
+{: .r}
+
+Or set specific size settings according to individual journal's requirements.
+
+~~~
+ggsave("Desktop/failures_plot.pdf", height = 6, units = "cm", dpi = 600)
+~~~
+{: .r}
