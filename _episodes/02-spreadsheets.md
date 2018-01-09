@@ -179,7 +179,7 @@ excludes data on students' math courses.
 > 5. Double check the file name and the location where you want to save it and hit 'Save'.
 {: .challenge}
 
-You can also open your CSV files in Excel!
+You now have a plain text version of the data, free from Excel-specific formatting. You can look at this data by opening the `.csv` file in TextEdit (Mac) or NotePad (Windows). Each value in the data is separated from the data in the next column by a comma. You can open CSV files in Excel if you want to preview the contents, but you can't open an Excel file in TextEdit or NotePad. 
 
 > ## Caveats on commas
 > In some datasets, the data values themselves may include commas (,). In that case, the software which you use (including Excel)
