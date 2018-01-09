@@ -8,7 +8,9 @@ objectives:
 - "Load external data from a .csv file into a data frame in R."
 - "Summarize the contents of a data frame in R."
 keypoints:
-- ""
+- "R is a programming language. RStudio is an Integrated Development Environment for working with R."
+- "Tabular data is stored in R as a dataframe object."
+- "You can get a sense of your data with `summary()`, `str()`, `names()`, `dim()` and other functions discussed here.
 ---
 
 ## What is R? What is RStudio?
