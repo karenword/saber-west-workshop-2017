@@ -169,11 +169,15 @@ it's a
 good format to work with for maximum portability and endurance. Most spreadsheet programs can save to delimited text formats like CSV
 easily, although they may give you a warning during the file export.
 
-To save a file you have opened in Excel in CSV format:
-
-1. From the top menu select 'File' and 'Save as'.
-2. In the 'Format' field, from the list, select 'Comma Separated Values' (`*.csv`).
-3. Double check the file name and the location where you want to save it and hit 'Save'.
+> ## Exercise
+> 
+> 1. Download the cleaned version of this data by clicking [here](https://raw.githubusercontent.com/ErinBecker/saber-west-workshop-2017/gh-pages/data/modified_data/student-por.xlsx). Note that this only includes data collected for students in Portugese classes, and
+excludes data on students' math courses.
+> 2. Open up the data in a spreadsheet program. 
+> 3. From the top menu select 'File' and 'Save as'.
+> 4. In the 'Format' field, from the list, select 'Comma Separated Values' (`*.csv`).
+> 5. Double check the file name and the location where you want to save it and hit 'Save'.
+{: .challenge}
 
 You can also open your CSV files in Excel!
 
