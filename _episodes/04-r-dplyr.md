@@ -216,8 +216,8 @@ sex mean_final_grade
 > ## What's a Tibble?
 > You may also have noticed that the output from these calls doesn't run off the
 > screen anymore. That's because **`dplyr`** has changed our `data.frame` object
-> > to an object of class `tbl_df`, also known as a "tibble". Tibble's data
-structure is very similar to a data frame. For our purposes the only differences
+> to an object of class `tbl_df`, also known as a "tibble". Tibble's data
+> structure is very similar to a data frame. For our purposes the only differences
 > are that, (1) in addition to displaying the data type of each column under its
 > name, it only prints the first few rows of data and only as many columns as fit
 > on one screen, (2) columns of class `character` are never converted into
@@ -294,8 +294,6 @@ sex school mean_final_grade max_absences
 > > {: .output}
 > {: .solution}
 {: .challenge}
-
-FIXME add something about missing values and mean.
 
 #### Tallying
 
@@ -393,6 +391,6 @@ counts the total number of records for each category.
 > > ~~~
 > > {: .output}
 > > 
-> > 15 year old had the highest mean grades and 22 year olds had the lowest. 
+> > 17 year olds had the highest mean grades and 22 year olds had the lowest. 
 > {: .solution}
 {: .challenge}
