@@ -86,7 +86,7 @@ the `Ctrl` + `Enter` shortcut (on Macs, `Cmd` +
 `Return` will work, too). The command on the current line in the
 script (indicated by the cursor) or all of the commands in the currently
 selected text will be sent to the console and executed when you press
-`Ctrl` + `Enter`. You can find other keyboard shortcuts in this [RStudio cheatsheet about the RStudio IDE](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf.
+`Ctrl` + `Enter`. You can find other keyboard shortcuts in this [RStudio cheatsheet about the RStudio IDE](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf).
                                                                                                                                  
 If R is ready to accept commands, the R console shows a `>` prompt. If it
 receives a command (by typing, copy-pasting or sent from the script editor using
