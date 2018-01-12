@@ -117,7 +117,7 @@ to get started.
 
 ## Starting looking at our data.
 
-We are studying the FIXME describe the data. The dataset is stored as a comma separated value (CSV) file.
+We will be working with the same cleaned CSV file that we created in the previous lesson. To ensure proper location and naming, we will download a new copy of that CSV file, below. 
 Each row holds information for a single student, and the columns represent:
 
 | Column           | Description                                         |
