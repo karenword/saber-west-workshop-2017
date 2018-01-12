@@ -19,3 +19,10 @@ Welcome to the Data Skills for Education Researchers workshop! At Data Carpentry
 
 4. This workshop has an etherpad. Please add your name to the etherpad to register your attendance at this workshop. Your instructor may also use it to post links or for collaborative communication during the workshop. The etherpad is located here:  http://pad.software-carpentry.org/saber-west-2018 
 
+Data Carpentry workshops in particular aim to address specific disciplines by teaching relevant skills applied to representative datasets. For today's exercises, we'll be using data drawn from a secondary education study of two Portuguese schools, published by [Cortez and Silva in 2008](https://archive.ics.uci.edu/ml/datasets/student+performance).
+
+[Original publication](http://www3.dsi.uminho.pt/pcortez/student.pdf).
+
+[Original dataset](https://archive.ics.uci.edu/ml/datasets/student+performance).
+
+P. Cortez and A. Silva. Using Data Mining to Predict Secondary School Student Performance. In A. Brito and J. Teixeira Eds., Proceedings of 5th FUture BUsiness TEChnology Conference (FUBUTEC 2008) pp. 5-12, Porto, Portugal, April, 2008, EUROSIS, ISBN 978-9077381-39-7. 
