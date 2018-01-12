@@ -78,7 +78,7 @@ tables from the very start of your data collection. The way your data is organiz
 to work with your data throughout your analysis, so it's worth
 thinking about when you're doing your data entry or setting up your
 experiment. We're going to look at a spreadsheet demonstrating some common
-issues with data organization and formatting, discuss how we could fixt these
+issues with data organization and formatting, discuss how we could fix these
 issues, and why we would need to, and then use a cleaned up version of the spreadsheet data in further analyses.
 
 ### Cardinal Rules
