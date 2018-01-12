@@ -10,7 +10,7 @@ objectives:
 keypoints:
 - "R is a programming language. RStudio is an Integrated Development Environment for working with R."
 - "Tabular data is stored in R as a dataframe object."
-- "You can get a sense of your data with `summary()`, `str()`, `names()`, `dim()` and other functions discussed here.
+- "You can get a sense of your data with `summary()`, `str()`, `names()`, `dim()` and other functions discussed here."
 ---
 
 ## What is R? What is RStudio?
