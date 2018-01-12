@@ -22,6 +22,8 @@ software that interprets the scripts written using it.
 your R scripts but also to interact with the R software. To function correctly,
 RStudio needs R and therefore both need to be installed on your computer.
 
+Download and install R by starting here: https://www.r-project.org/
+Download and install RStudio by starting here: https://www.rstudio.com/
 
 ## Why learn R?
 
