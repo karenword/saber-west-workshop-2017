@@ -145,7 +145,7 @@ We are going to use the R function `download.file()` to download the CSV file
 that contains the survey data from figshare, and we will use `read.csv()` to
 load into memory the content of the CSV file as an object of class `data.frame`.
 
-To download the data, run the following:
+To download the data, run the following command. To practice using the Source window to save scripts, paste the command there and then click "Run" at the top of that window. Or, you can paste it directly into the Console window.
 
 ~~~
 download.file("https://raw.githubusercontent.com/ErinBecker/saber-west-workshop-2017/gh-pages/data/modified_data/student-por.csv", destfile = "student_por.csv", method = "curl")
