@@ -339,7 +339,7 @@ counts the total number of records for each category.
 {: .challenge}
 
 > ## Exercise
-> Use `group_by()` and `summarize()` to find the mean, min, and max number of absences
+> Use `group_by()` and `summarize()` to find the mean, min, and max final grade
 > for each school.
 >
 > > ## Solution
